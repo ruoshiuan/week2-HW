@@ -59,7 +59,7 @@ function maxProduct(nums){
     for(var o=0;o<nums.length;o++){
       if((nums[i])*(nums[o])>max && i!=o){
         max=nums[i]*nums[o];   
-      }else if(nums.length==2 &&nums[i]>nums[o]){
+      }else if(nums.length==2 && nums[i]>nums[o]){
         max=nums[i]
       }
     }
