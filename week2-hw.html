@@ -52,19 +52,25 @@ avg({
 function maxProduct(nums){
   // 請用你的程式補完這個函式的區塊
   if(nums.length==[]){
-    return 0;}
+    return 0;
+  }
   var max=0;
   for(var i=0;i<nums.length;i++){
     for(var o=0;o<nums.length;o++){
       if((nums[i])*(nums[o])>max && i!=o){
         max=nums[i]*nums[o];   
+      }else if(nums.length==2 &&nums[i]>nums[o]){
+        max=nums[i]
       }
     }
-  }}
+  }return max;
+}
 maxProduct([5, 20, 2, 6]);
 // 得到 120 因為 20 和 6 相乘得到最大值
 maxProduct([10, -20, 0, 3]); 
 // 得到 30 因為 10 和 3 相乘得到最大值
+maxProduct([-20, 2])
+// 得到 2
 
 
 ///////////////////// /* 要求4 */ /////////////////////
@@ -97,7 +103,7 @@ function maxZeros(nums){
     }else if(nums[i]>0){
       the_input.push(count);
       count=0;
-   }
+  }
     }
   if(count>0){
       var result=the_input.push(count);

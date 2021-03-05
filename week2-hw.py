@@ -7,8 +7,8 @@ def caculate(min,max):
         sum=sum+min
         min+=1
     print(sum)
-caculate(4,8) # 你的程式要能夠計算 1+2+3，最後印出 6calculate(4, 8)
-caculate(1,3) # 你的程式要能夠計算 4+5+6+7+8，最後印出 30
+caculate(1,3) # 你的程式要能夠計算 1+2+3，最後印出 6
+caculate(4,8) # 你的程式要能夠計算 4+5+6+7+8，最後印出 30
 
 
 ######################  要求2  ######################
@@ -40,18 +40,21 @@ def maxProduct(nums):
     # 請用你的程式補完這個函式的區塊
     if len(nums)==[]:
         print(0)
-
     max=0
     for i in range(len(nums)):
         for o in range(len(nums)):
             if nums[i]*nums[o]>max and i!=o:
                 max=nums[i]*nums[o]
+            elif len(nums)==2 and nums[i]>nums[o]:
+                max=nums[i]
     print(max)
 
 maxProduct([5, 20, 2, 6])
 # 得到 120 因為 20 和 6 相乘得到最大值
 maxProduct([10, -20, 0, 3])
 # 得到 30 因為 10 和 3 相乘得到最大值
+maxProduct([-20, 2])
+# 得到 2
 
 
 ######################  要求4  ######################
